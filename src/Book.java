@@ -1,26 +1,26 @@
 import java.time.LocalDate;
 
 public class Book {
-    String bookName;
-    String authorName;
-    int publishYear;
+    private String bookName;
+    private final Author authorName;
+    private int publishYear;
 
-    public Book(String bookName, String authorName, int publishYear) {
+    public Book(String bookName, Author authorName, int publishYear) {
         this.bookName = bookName;
         this.authorName = authorName;
         this.publishYear = publishYear;
     }
 
     public String getBookName() {
-        return bookName;
+        return this.bookName;
     }
 
-    public String getAuthorName() {
+    public Author getAuthorName() {
         return authorName;
     }
 
     public int getPublishYear() {
-        return publishYear;
+        return this.publishYear;
     }
 
     public void setPublishYear(int publishYear) {
