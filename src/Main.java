@@ -23,13 +23,15 @@ public class Main {
         System.out.println(" ");
         // ДЗ
         System.out.println("ДЗ");
-        Author authorRowling = new Author("Джоан Роулинг");
-        Author authorTolsloi = new Author("Лев Толстой");
+        Author authorRowling = new Author("Джоан", "Роулинг");
+        Author authorTolsloi = new Author("Лев", "Толстой");
         Book book1 = new Book("Гарри Поттер и Философский камень", authorRowling, 1997);
         Book book2 = new Book("Война и мир", authorTolsloi, 1869);
-        System.out.println("Книга 1 - " + book1.getBookName() + ", автор - " + authorRowling.getAuthorName() + ", год публикации - " + book1.getPublishYear());
-        System.out.println("Книга 2 - " + book2.getBookName() + ", автор - " + authorTolsloi.getAuthorName() + ", год публикации - " + book2.getPublishYear());
+        System.out.println("Книга 1 - " + book1.getBookName() + ", автор - " + book1.getAuthorName() + " " + book1.getAuthorSurName() + ", год публикации - " + book1.getPublishYear());
+        System.out.println("Книга 2 - " + book2.getBookName() + ", автор - " + book2.getAuthorName() + " " + book1.getAuthorSurName() + ", год публикации - " + book2.getPublishYear());
         book2.setPublishYear(1873);
-        System.out.println("Книга 2 - " + book2.getBookName() + ", автор - " + authorTolsloi.getAuthorName() + ", год публикации - " + book2.getPublishYear());
+        System.out.println("Книга 2 - " + book2.getBookName() + ", автор - " + book2.getAuthorName() + " " + book2.getAuthorSurName() + ", год публикации - " + book2.getPublishYear());
+        System.out.println("Книга 2 - " + book2.getBookName() + ", автор - " + book2.getAuthorName1().getName() + " " + book2.getAuthorName1().getSurName() + ", год публикации - " + book2.getPublishYear());
+
     }
 }
